@@ -1,0 +1,266 @@
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    background-color: var(--main-color);
+    justify-content: center;
+    z-index: 99;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav .logo {
+    width: 100px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .mode,
+  .cart,
+  .menu {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .menu header img {
+    width: 30%;
+  }
+  
+  .menu .menu-content {
+    width: 25vw;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    color: black;
+    top: 0;
+    padding: 25px;
+    left: 0;
+    z-index: 100;
+    transform: translateX(0);
+    transition: 0.5s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    overflow-y: scroll;
+  }
+  
+  .menu .menu-content.not-show {
+    transform: translateX(-100%);
+  }
+  
+  .menu .menu-content header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--main-color);
+  }
+  
+  .menu .menu-content header i {
+    font-size: 28px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--main-color);
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .menu .menu-content header i:hover {
+    background-color: var(--main-color);
+    color: white;
+  }
+  
+  .menu .mode-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cart:hover,
+  .menu:hover,
+  .mode:active,
+  .cart:active,
+  .menu:active {
+    background-color: var(--main-color);
+  }
+  
+  .mode:hover,
+  .mode:active {
+    background-color: #e2e8f0;
+  }
+  
+  .cart:hover i,
+  .menu:hover i,
+  .cart:active i,
+  .menu:active i {
+    color: white;
+  }
+  
+  .cart {
+    position: relative;
+  }
+  
+  .cart .len {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    color: var(--main-color);
+    border-radius: 0 5px 0 5px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart:hover .len {
+    color: white;
+  }
+  
+  nav form {
+    width: 60%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  nav form input {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 0 0 50px;
+    font-size: 18px;
+  }
+  
+  nav form input::placeholder {
+    color: #9ca3af;
+  }
+  
+  nav form i {
+    color: var(--main-color);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+  }
+  
+  .mode i,
+  .cart i,
+  .menu i {
+    font-size: 30px;
+    color: var(--main-color);
+  }
+
+  .menu .uil-bars {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu hr {
+    margin: 0;
+  }
+  
+  .menu .menu-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  
+  .menu .menu-elements .ele {
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: inherit;
+  }
+  
+  .manu-insta-image {
+    width: 30%;
+    margin: 60px auto 0;
+  }
+  .manu-insta-image img {
+    width: 100%;
+  }
+
+  .menu .menu-elements .ele:hover {
+    background-color: #e2e8f0;
+  }
+  
+  .menu .menu-elements .ele i {
+    color: var(--main-color);
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      gap: 10px;
+    }
+  
+    nav .logo {
+      width: 75px;
+      height: 50px;
+    }
+
+    nav form {
+      height: 50px;
+      width: 32%;
+    }
+  
+    .menu .menu-content {
+      width: 100%;
+    }
+  
+    .mode,
+    .cart,
+    .menu {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1080px) {
+    nav {
+      gap: 15px;
+    }
+  
+    nav form {
+      width: 70%;
+    }
+  
+    .menu .menu-content {
+      width: 40vw;
+    }
+  }
+  

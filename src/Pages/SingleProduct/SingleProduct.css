@@ -1,0 +1,52 @@
+.related-products {
+  position: relative;
+  border-radius: 8px;
+}
+
+.related-products h4 {
+  color: var(--main-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.related-products {
+  width: 100%;
+}
+
+.related-swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--main-color);
+  font-size: 2.5rem;
+  top: 40%;
+}
+
+.money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.money .discount {
+  position: relative;
+}
+
+.money .discount img {
+  width: 60px;
+}
+
+.money .discount p {
+  position: absolute;
+  top: 18px;
+  color: white;
+  font-weight: bold;
+  left: 13px;
+}

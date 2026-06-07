@@ -1,0 +1,12 @@
+.about {
+    direction: rtl;
+}
+
+.about .row {
+    padding: 8rem 0 4rem;
+}
+
+.about img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}

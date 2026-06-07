@@ -1,0 +1,209 @@
+.home {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.category img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category h5 {
+    margin: 0 10px;
+}
+
+.category-item {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-3px);
+}
+
+.category-item.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.search-notfound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+
+.search-notfound img {
+    width: 30px;
+}
+
+.oreder {
+    width: 38vw;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    color: black;
+    top: 0;
+    padding: 25px;
+    right: 0;
+    z-index: 9999;
+    transform: translateX(0);
+    transition: 0.5s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    overflow-y: scroll;
+}
+
+.oreder.not-show {
+    transform: translateX(100%);
+}
+
+.oreder header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--main-color);
+}
+
+.oreder header h5 {
+    font-size: 20px;
+}
+
+.oreder header i {
+    font-size: 28px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.oreder header i:hover,
+.oreder header i:active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.to-update.show {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: fit-content;
+    gap: 20px;
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    border-radius: 5px;
+}
+
+.to-update.show::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--main-color);
+    animation: waiting 2s ease;
+}
+
+@keyframes waiting {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.to-update p {
+    margin: 0;
+}
+
+.to-update i {
+    color: var(--main-color);
+    font-size: 28px;
+}
+
+/* ✅ تعديل خاص بالشاشات الصغيرة لدعم السحب الأفقي */
+@media screen and (max-width: 767px) {
+    .category {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .category::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .category::-webkit-scrollbar-thumb {
+        background-color: var(--main-color);
+        border-radius: 10px;
+    }
+
+    .category-item {
+        flex: 0 0 auto;
+        min-width: 100px;
+        padding: 5px 5px 20px;
+    }
+
+    .category img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .category h5 {
+        font-size: 16px;
+    }
+
+    .oreder {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .store {
+        gap: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .oreder {
+        width: 65%;
+    }
+}

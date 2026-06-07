@@ -1,0 +1,90 @@
+* {
+    direction: rtl;
+}
+
+:root {
+    --main-color: #7b00ff;
+}
+
+body {
+    transition: 0.3s;
+}
+
+body.dark {
+    background-color: #191919;
+    color: white;
+    
+}
+
+ul li {
+    list-style: none;
+}
+
+body.light {
+    background-color: #e2e8f0;
+    color: black;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+  }
+  ::-webkit-scrollbar-track {
+    background-color: inherit;
+  }
+
+.container {
+    margin-top: 120px;
+}
+
+
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.toggle-switch {
+    position: relative;
+    background-color: #ccc;
+    height: 32px;
+    width: 78px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: -20px;
+}
+
+.toggle-switch::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\2715";
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    top: 4px;
+    left: 4px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--main-color);
+}
+
+.toggle-checkbox:checked + .toggle-switch::before {
+    content: "";
+    left: 50px;
+    color: var(--main-color);
+}

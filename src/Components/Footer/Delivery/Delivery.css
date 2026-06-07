@@ -1,0 +1,9 @@
+.delivery-and-pay-item {
+    margin: 3rem 0;
+}
+
+@media (min-width: 767px) and (max-width: 1080px) {
+    .delivery-and-pay {
+       min-height: 500px;
+    }
+}

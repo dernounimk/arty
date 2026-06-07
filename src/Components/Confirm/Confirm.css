@@ -1,0 +1,312 @@
+.confirm-container {
+  width: 100%;
+  margin: 120px auto 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  direction: rtl;
+  border-radius: 10px;
+}
+
+.confirm-container .details {
+    width: 100%;
+  }
+
+  .confirm-form {
+    width: 100%;
+    align-self: flex-start;
+  }
+  .confirm-form h5 {
+    margin-bottom: 15px;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .confirm-container  .input, .select , textarea{
+    width: 49%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    position: relative;
+  }
+
+  .confirm-container .popup {
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    color: black;
+    visibility: hidden;
+    padding: 80px 30px 30px;
+    transition: transform 0.4s,top 0.4s;
+    box-shadow: 0 2px 5px rgb(0, 0, 0,0.2)
+}
+
+.confirm-container .popup.open-popup {
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    visibility: visible;
+}
+
+.confirm-container .popup i {
+    height: 80px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0,0.4);
+    width: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    border-radius: 100%;
+    position: absolute;
+    top: -40px;
+    color: white;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-container .popup h2 {
+    margin-bottom: 20px;
+}
+
+.confirm-container .popup button {
+  width: 100%;
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 10px 0; 
+  border: 1px solid var(--main-color);
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.confirm-container .popup button:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+
+
+  .confirm-container input.false,
+  .confirm-container select.false {
+    background-color: #ffe6e6;
+    border: 1px solid red;
+  }
+
+  .confirm-container textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+  }
+
+  .last-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .last-row .instagram {
+    position: relative;
+  }
+
+  .last-row .instagram input {
+    padding: 10px 10px 10px 40px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .last-row .instagram i {
+    position: absolute;
+    color: var(--main-color);
+    font-size: 28px;
+    top: 0;
+    left: 10px;
+  }
+
+  .confirm-container .input:focus, .select:focus , textarea:focus {
+    outline: 2px solid var(--main-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .delivery-place {
+    margin: 15px 0;
+    font-size: 15px;
+    text-align: right;
+    right: 0;
+    flex-basis: 50%;
+  }
+  
+  .delivery-place span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .delivery-place label {
+    display: block;
+    font-size: 18px;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+  }
+  .delivery-place label span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--main-color);
+  }
+
+  .delivery-place input {
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+    appearance: none;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .delivery-place input:checked {
+    background-color: white;
+    border: 1px solid var(--main-color);
+  }
+  .delivery-place input:checked::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin: 3px auto;
+  }
+  
+  .summary {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .confirm-container .detail-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .confirm-container .detail-row .price {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .order-btn, .back-home {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back-home {
+    font-size: 18px;
+  }
+
+  .back-home i {
+    font-size: 25px;
+  }
+
+  .order-btn i {
+    font-size: 20px;
+  }
+  
+.order-btn:hover, .back-home:hover{
+  background-color: white;
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .confirm-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .delivery-place {
+    flex-basis: 80%;
+  }
+  .last-row .instagram i {
+    font-size: 18px;
+    left: 5px;
+    top: 20%;
+  }
+  .last-row .instagram input{
+    width: 155px;
+    padding: 10px 10px 10px 25px;
+  }
+  .delivery-place label {
+    font-size: 16px;
+  }
+  .confirm-container .popup {
+    width: 80%;
+  }
+}
+
+.empty-cart {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .last-row .instagram input {
+    width: 150px;
+  }
+  .last-row .instagram input{
+    width: 155px;
+    padding: 10px 10px 10px 25px;
+  }
+  .last-row textarea {
+    width: 155px;
+  }
+  .last-row .instagram i {
+    font-size: 18px;
+    left: 5px;
+  }
+  .delivery-place {
+    flex-basis: 70%;
+  }
+  .delivery-place label {
+    font-size: 16px;
+  }
+}

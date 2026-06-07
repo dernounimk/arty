@@ -1,0 +1,134 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    color: var(--text-color);
+}
+
+header a {
+    text-decoration: none;
+}
+
+.length {
+    background-color: #ffc107;
+    color: black;
+    width: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17px;
+    font-size: 12px;
+    border-radius: 50%;
+    font-weight: bold;
+    transform: translate(12px, 3px);
+    position: absolute;
+}
+
+nav {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+header .container {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0 1rem;
+    background-color: var(--back-color);
+    transition: 1s;
+}
+
+header .container.dark {
+    background-color: var(--text-color);
+    color: var(--back-color);
+}
+
+.logo {
+    transition: 1s;
+}
+
+.logo {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    text-align: center;
+}
+
+.logo img {
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.mood {
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+.mood.light {
+    background-color: var(--text-color);
+    color: var(--back-color);
+}
+.mood.dark {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    transition: 0.3s;
+}
+.link.message {
+    margin-top: 7px;
+}
+.link:hover,
+.link.active {
+    transform: translateY(5px);
+}
+
+.link.dark {
+    color: var(--back-color);
+}
+.icon {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: 7rem;
+    }
+    .icon {
+        font-size: 1.3rem;
+    }
+    .list {
+        gap: 2rem;
+    }
+    .mobile {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .length {
+        font-size: 10px;
+        height: 14px;
+        transform: translate(10px, 5px);
+        width: 14px;
+    }
+}

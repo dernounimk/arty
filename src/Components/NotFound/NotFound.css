@@ -1,0 +1,51 @@
+.not-found {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.not-found img {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.not-found .back {
+    position: absolute;
+    left: 30%;
+    top: 70%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.not-found .back:hover {
+    background-color: white;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.not-found .back i {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+    .not-found .back {
+        top: 70%;
+        left: 10%;
+        padding: 2px 5px;
+    }
+}
